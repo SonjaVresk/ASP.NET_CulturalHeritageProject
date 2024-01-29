@@ -1,0 +1,86 @@
+﻿@model CulturalHeritageWebApp.ViewModels.VMHeritage
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/edit.css">
+</head>
+<body>
+
+    <div class="edit" style="background-image: linear-gradient(rgba(0,0,0,0.5), #F8F0E5), url(/Photos/sculpture.jpg);">
+        <form asp-action="Edit">
+            <div class="edit-group" style="display: none;">
+                <label asp-for="IDHeritage" class="control-label"></label>
+                <input asp-for="IDHeritage" class="form-control" />
+                <span asp-validation-for="IDHeritage" class="text-danger"></span>
+            </div>
+            <div class="edit-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" id="title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="edit-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="edit-group">
+                @Html.LabelFor(model => model.AgeCategoryID, "Period", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.AgeCategoryID, Model.AgeCategoryList, "Select Age Category", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.AgeCategoryID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="edit-group" style="display: none;">
+                <label asp-for="HeritageCategoryID" class="control-label">Heritage Category: Tangible Cultural Heritage</label>
+                <input asp-for="HeritageCategoryID" class="form-control" type="hidden" value="3" />
+                <span asp-validation-for="HeritageCategoryID" class="text-danger"></span>
+            </div>
+            <div class="edit-group">
+                <a asp-controller="Photography" asp-action="Create" asp-route-heritageID="@Model.IDHeritage" class="hero-btn">Add Photography</a>
+                <a asp-controller="Video" asp-action="Create" asp-route-heritageID="@Model.IDHeritage" class="hero-btn">Add Video</a>
+            </div>
+
+            <div class="edit-group">
+                <input type="submit" value="Save" class="hero-btn save" />
+            </div>
+
+        </form>
+
+
+        <div>
+            <a asp-action="Index" class="hero-btn">Back to List</a>
+        </div>
+
+    </div>
+
+
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo" />
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+</body>
+</html>

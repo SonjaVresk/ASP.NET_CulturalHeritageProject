@@ -1,0 +1,117 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Photos\armenian.jpg" />
+    <Content Remove="wwwroot\Photos\armenianletter.jpg" />
+    <Content Remove="wwwroot\Photos\closed.png" />
+    <Content Remove="wwwroot\Photos\closing.png" />
+    <Content Remove="wwwroot\Photos\d.png" />
+    <Content Remove="wwwroot\Photos\da.png" />
+    <Content Remove="wwwroot\Photos\dacingInd.png" />
+    <Content Remove="wwwroot\Photos\dan.png" />
+    <Content Remove="wwwroot\Photos\dance.jpeg" />
+    <Content Remove="wwwroot\Photos\dancing.png" />
+    <Content Remove="wwwroot\Photos\dancingGroup.png" />
+    <Content Remove="wwwroot\Photos\dav.png" />
+    <Content Remove="wwwroot\Photos\david-mic.png" />
+    <Content Remove="wwwroot\Photos\david.png" />
+    <Content Remove="wwwroot\Photos\david_statue.jpg" />
+    <Content Remove="wwwroot\Photos\Diocletians-Palace.jpg" />
+    <Content Remove="wwwroot\Photos\ellipsis.png" />
+    <Content Remove="wwwroot\Photos\face-logo.png" />
+    <Content Remove="wwwroot\Photos\giza.jpg" />
+    <Content Remove="wwwroot\Photos\groupDancing.png" />
+    <Content Remove="wwwroot\Photos\heritageLogo.png" />
+    <Content Remove="wwwroot\Photos\hero-and-leander.jpg" />
+    <Content Remove="wwwroot\Photos\homephoto.jpg" />
+    <Content Remove="wwwroot\Photos\iherit.png" />
+    <Content Remove="wwwroot\Photos\iheritage.png" />
+    <Content Remove="wwwroot\Photos\insta-logo.png" />
+    <Content Remove="wwwroot\Photos\jordan.jpg" />
+    <Content Remove="wwwroot\Photos\joy.jpg" />
+    <Content Remove="wwwroot\Photos\joy_fortune.jpg" />
+    <Content Remove="wwwroot\Photos\karnataka.jpg" />
+    <Content Remove="wwwroot\Photos\karnatakanew.jpg" />
+    <Content Remove="wwwroot\Photos\korean.jpeg" />
+    <Content Remove="wwwroot\Photos\lado.jpg" />
+    <Content Remove="wwwroot\Photos\logo.png" />
+    <Content Remove="wwwroot\Photos\lybia.png" />
+    <Content Remove="wwwroot\Photos\menu.png" />
+    <Content Remove="wwwroot\Photos\palmyra.png" />
+    <Content Remove="wwwroot\Photos\papermaking.jpg" />
+    <Content Remove="wwwroot\Photos\parthenon.jpg" />
+    <Content Remove="wwwroot\Photos\pyram.png" />
+    <Content Remove="wwwroot\Photos\pyrami.png" />
+    <Content Remove="wwwroot\Photos\pyramid.png" />
+    <Content Remove="wwwroot\Photos\rating.png" />
+    <Content Remove="wwwroot\Photos\sculpture.jpg" />
+    <Content Remove="wwwroot\Photos\sculptures-blue.jpg" />
+    <Content Remove="wwwroot\Photos\social.png" />
+    <Content Remove="wwwroot\Photos\socinclusion.png" />
+    <Content Remove="wwwroot\Photos\star.png" />
+    <Content Remove="wwwroot\Photos\stone.jpeg" />
+    <Content Remove="wwwroot\Photos\taj.jpg" />
+    <Content Remove="wwwroot\Photos\techtransfer.png" />
+    <Content Remove="wwwroot\Photos\tik-tok-logo.png" />
+    <Content Remove="wwwroot\Photos\user1.png" />
+    <Content Remove="wwwroot\Photos\user2.png" />
+    <Content Remove="wwwroot\Photos\vase.png" />
+    <Content Remove="wwwroot\Photos\x-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CulturalHeritageBL\CulturalHeritageBL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\Photos\armenian.jpg" />
+    <Resource Include="wwwroot\Photos\closing.png" />
+    <Resource Include="wwwroot\Photos\da.png" />
+    <Resource Include="wwwroot\Photos\dancingGroup.png" />
+    <Resource Include="wwwroot\Photos\david-mic.png" />
+    <Resource Include="wwwroot\Photos\Diocletians-Palace.jpg" />
+    <Resource Include="wwwroot\Photos\face-logo.png" />
+    <Resource Include="wwwroot\Photos\giza.jpg" />
+    <Resource Include="wwwroot\Photos\hero-and-leander.jpg" />
+    <Resource Include="wwwroot\Photos\homephoto.jpg" />
+    <Resource Include="wwwroot\Photos\iherit.png" />
+    <Resource Include="wwwroot\Photos\insta-logo.png" />
+    <Resource Include="wwwroot\Photos\jordan.jpg" />
+    <Resource Include="wwwroot\Photos\joy_fortune.jpg" />
+    <Resource Include="wwwroot\Photos\karnatakanew.jpg" />
+    <Resource Include="wwwroot\Photos\korean.jpeg" />
+    <Resource Include="wwwroot\Photos\lado.jpg" />
+    <Resource Include="wwwroot\Photos\lybia.png" />
+    <Resource Include="wwwroot\Photos\menu.png" />
+    <Resource Include="wwwroot\Photos\palmyra.png" />
+    <Resource Include="wwwroot\Photos\papermaking.jpg" />
+    <Resource Include="wwwroot\Photos\parthenon.jpg" />
+    <Resource Include="wwwroot\Photos\pyrami.png" />
+    <Resource Include="wwwroot\Photos\rating.png" />
+    <Resource Include="wwwroot\Photos\sculpture.jpg" />
+    <Resource Include="wwwroot\Photos\sculptures-blue.jpg" />
+    <Resource Include="wwwroot\Photos\social.png" />
+    <Resource Include="wwwroot\Photos\star.png" />
+    <Resource Include="wwwroot\Photos\stone.jpeg" />
+    <Resource Include="wwwroot\Photos\taj.jpg" />
+    <Resource Include="wwwroot\Photos\techtransfer.png" />
+    <Resource Include="wwwroot\Photos\tik-tok-logo.png" />
+    <Resource Include="wwwroot\Photos\user1.png" />
+    <Resource Include="wwwroot\Photos\user2.png" />
+    <Resource Include="wwwroot\Photos\vase.png" />
+    <Resource Include="wwwroot\Photos\x-logo.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,77 @@
+﻿@model CulturalHeritageWebApp.ViewModels.VMHeritage
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/details.css">
+    <link rel="stylesheet" href="~/lib/jquery.flipster.min.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="carousel">
+            <ul>
+                @foreach (var photo in Model.Photographies)
+                {
+                    <li>
+                        @if (!string.IsNullOrEmpty(photo.PicturePath))
+                        {
+                            <img src="@photo.PicturePath" alt="@photo.Description" />
+                        }
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+
+    <section class="video">
+        <div class="video-row">
+            <div class="video-col">
+                @foreach (var video in Model.Videos)
+                {
+                    <div class="video-item">
+                        <!-- YouTube video using iframe -->
+                        <iframe width="560" height="315" src="@video.VideoPath" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                }
+            </div>
+            <div class="video-col">
+                <a asp-action="Index" class="hero-btn">Back to List</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo" />
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="~/lib/jquery.flipster.min.js"></script>
+
+    <script>
+        $('.carousel').flipster({
+            style: 'carousel',
+            spacing: -0.3,
+        });
+    </script>
+</body>
+</html>

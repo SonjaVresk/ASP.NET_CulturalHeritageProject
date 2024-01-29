@@ -1,0 +1,296 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3), #F8F0E5), url(/Photos/stone.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 80px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: left;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px, 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bolder;
+            text-shadow: 0 0 4px white;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: rgba(99, 96, 79, 0.9);
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+.text-box {
+    color: rgba(59, 58, 55);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+    .text-box h1 {
+        font-size: 52px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        text-shadow: 0 0 40px white;
+    }
+
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 30px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .nav-links ul li span {
+            display: none;
+        }
+
+    .nav-links {
+        position: absolute;
+        background: rgba(61, 61, 58, 0.98);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+/*Create New*/
+
+
+.courses {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+    .courses h1{
+        margin-bottom: 50px;
+    }
+
+
+    .courses-col {
+        flex: 1;
+        padding: 30px;
+        background-color: rgba(255, 231, 184, 0.2);
+        margin: 10px;
+        text-align: justify;
+        border-radius: 10px;
+    }
+
+
+    .courses-col p {
+        padding: 15px 25px 25px;
+        text-align: justify;
+    }
+
+    .courses-col h4 {
+        margin-top: 30px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 1px solid rgba(61, 61, 58);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: rgb(247, 207, 139, 0.5);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+    .hero-btn:hover {
+        border: 1px solid #fff;
+        background: rgb(148, 130, 74, 0.5);
+        color: #fff;
+        transition: 1s;
+    }
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .courses-col {
+        width: 100%;
+    }
+
+        .courses-col iframe {
+            width: 100%;
+        }
+}
+
+.playQuiz {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.quiz-container {
+    background-color: rgba(224, 128, 2, 0.5);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.quiz-container h1{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn {
+    background: #751b02;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background-color: #9ecc95;
+}
+.incorrect {
+    background-color: #e3aaaa;
+}
+
+
+/*Footer*/
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+    .footer h4 {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .footer .logo {
+        height: 25px;
+        width: 25px;
+        margin: 0 10px;
+        cursor: pointer;
+    }

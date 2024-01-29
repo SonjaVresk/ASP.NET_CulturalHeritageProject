@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/homepage.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img src="~/Photos/vase.png">
+            <div class="nav-links" id="navLinks">
+                <img src="~/Photos/closing.png" class="fa" style="width:15px; height: 15px" onclick="hideMenu()"/>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">HOME <span>&vert;</span></a></li>
+                    <li><a asp-controller="Locations" asp-action="Index">Cultural Locations <span>&vert;</span></a></li>
+                    <li><a asp-controller="Intangible" asp-action="Index">Intangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Tangible" asp-action="Index">Tangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Education">Education <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+                </ul>
+            </div>
+            <img src="~/Photos/menu.png" style="width:25px; height: 25px" class="fa" onclick="showMenu()" />
+        </nav>
+    <div class="text-box">
+            <h1>CULTURAL HERITAGE PRESERVATION PLATFORM</h1>
+            <p>Cultural heritage embodies the history, traditions, and values of a society. 
+                It reflects our identity and provides a sense of belonging and continuity. <br />
+                Preserving cultural heritage safeguards unique landmarks, artifacts, languages, and practices for future generations.</p>
+
+            <a asp-controller="Home" asp-action="About" class="hero-btn">Read more about our work...</a>
+    </div>
+    </section>
+
+    @*The Divisions of Cultural Heritage*@
+
+    <section class="divisions">
+        <h1>The Divisions of Cultural Heritage</h1>
+        <p>Cultural heritage encompasses the unique expressions, traditions, artifacts, and values inherited from past generations, <br />representing a collective identity and enriching the diverse tapestry of human civilization.</p>
+        
+        <div class="row">
+            <div class="divisions-col">
+                <h3>Cultural Locations</h3>
+                <p>Cultural locations refer to places of significance due to their cultural, historical, or artistic value. 
+                    These locations often include museums, heritage sites, monuments, landmarks, religious buildings, archaeological sites, cultural 
+                    centers, and other places that represent and preserve cultural identity, history, and heritage. They serve as repositories of 
+                    cultural artifacts, traditions, and stories, offering insights into a society's past, values, and traditions.</p>
+            </div>
+            <div class="divisions-col">
+                <h3>Intangible Heritage</h3>
+                <p>Intangible heritage refers to cultural elements that are not physical objects but are instead based on cultural practices, traditions, 
+                    expressions, knowledge, and skills passed down from generation to generation. These include traditions, rituals, performing arts, oral 
+                    traditions, social practices, craftsmanship, knowledge about nature and the universe, languages, and other forms of intangible cultural 
+                    expressions that communities, groups, or individuals recognize as part of their cultural heritage.</p>
+            </div>
+            <div class="divisions-col">
+                <h3>Tangible Heritage</h3>
+                <p>Tangible heritage comprises physical entities, encompassing structures, and objects that hold historical, cultural, 
+                    artistic, or religious significance. It encompasses tangible elements such as sculptures, paintings, architectural masterpieces. 
+                    This category embodies the physical manifestations of a culture's legacy, including artworks, 
+                    monuments, artifacts, archaeological sites, and other material objects that reflect the cultural, social, 
+                    or historical value of a community or civilization.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+   @* Explore our Heritage Platform*@
+
+    <section class="explore">
+        <h1>Explore our Heritage Platform</h1>
+
+        <div class="row">
+            <div class="explore-col">
+                <a asp-controller="Locations" asp-action="Index">
+                <img src="~/Photos/pyrami.png">
+                <div class="layer">
+                    <h3>CULTURAL LOCATIONS</h3>
+                </div>
+                </a>
+            </div>
+            <div class="explore-col">
+                <a asp-controller="Intangible" asp-action="Index">
+                <img src="~/Photos/dancingGroup.png">
+                <div class="layer">
+                    <h3>INTANGIBLE HERITAGE</h3>
+                </div>
+                </a>
+            </div>
+            <div class="explore-col">
+                <a asp-controller="Tangible" asp-action="Index">
+                <img src="~/Photos/david-mic.png">
+                <div class="layer">
+                    <h3>TANGIBLE HERITAGE</h3>
+                </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+         @*Our Projects*@
+
+    <section class="ourProjects">
+        <h1>Our Projects</h1>
+
+        <div class="row">
+            <div class="ourprojects-col">
+                <img src="~/Photos/iherit.png">
+                <h3>iHERITAGE project: new experience of cultural heritage</h3>
+                <p>New techniques to improve its level of interpretation, taking advantage of new technologies and commercialising the latest research results.</p>
+            </div>
+            <div class="ourprojects-col">
+                <img src="~/Photos/techtransfer.png">
+                <h3>TECHNOLOGY TRANSFER: sharing intellectual property with others</h3>
+                <p>Movement of data, designs, inventions, materials, software, technical knowledge or trade secrets from one organisation to another or from one purpose to another.</p>
+            </div>
+            <div class="ourprojects-col">
+                <img src="~/Photos/social.png">
+                <h3>SOCIAL INCLUSION: ensure equal opportunities</h3>
+                <p>Improving the terms on which individuals and groups take part in society—improving the ability, opportunity, and dignity of those disadvantaged on the basis of their identity.</p>
+            </div>
+        </div>
+    </section>
+
+    @*Comments*@
+
+    <section class="comments">
+        <h1>What our partners say</h1>
+
+        <div class="row">
+            <div class="comments-col">
+                <img src="~/Photos/user1.png"> 
+                <div>
+                    <p>
+                        Participating in the iHeritage project was an incredibly enriching experience! It provided a platform to delve into diverse cultural heritages, fostering a deeper understanding of our shared history and traditions. The project's collaborative nature encouraged learning, appreciation, and preservation of invaluable cultural legacies.
+                    </p>
+                    <h3>Chris Maloni</h3>
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                </div>
+            </div>
+            <div class="comments-col">
+                <img src="~/Photos/user2.png">
+                <div>
+                    <p>
+                        Being a part of the iHeritage project was an enlightening journey into the depths of cultural diversity. It offered a unique opportunity to celebrate and safeguard our heritage, fostering a sense of unity and respect for the rich tapestry of cultures that shape our world. Great experience working with motivated people.
+                    </p>
+                    <h3>David Johnson</h3>
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/star.png" class="star">
+                    <img src="~/Photos/rating.png" class="star">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+     @*Enroll*@
+
+    <section class="enroll">
+        <h1>Enroll in our projects <br /> Take part in preserving cultural heritage</h1>
+        <a asp-controller="Home" asp-action="About" class="hero-btn">CONTACT US</a>
+    </section>
+
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo"/>
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+    @*JavaSript for Toggle Menu*@
+    <script src="~/js/site.js"></script>
+</body>
+</html>

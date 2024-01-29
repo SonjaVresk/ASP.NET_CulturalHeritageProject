@@ -1,0 +1,72 @@
+﻿@model CulturalHeritageWebApp.ViewModels.VMVideo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/create.css">
+</head>
+<body>
+
+    <div class="create">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="create-group" style="display: none;">
+                <label asp-for="IDVideo" class="control-label"></label>
+                <input asp-for="IDVideo" class="form-control" />
+                <span asp-validation-for="IDVideo" class="text-danger"></span>
+            </div>
+            <div class="create-group" style="display: none;">
+                <label asp-for="HeritageId" class="control-label"></label>
+                <input asp-for="HeritageId" class="form-control" />
+                <span asp-validation-for="HeritageId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="HeritageId" />
+            <div class="create-group">
+                <label asp-for="VideoPath" class="control-label"></label>
+                <input asp-for="VideoPath" class="form-control" />
+                <span asp-validation-for="VideoPath" class="text-danger"></span>
+            </div>
+            <div class="create-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="create-group" style="display: none;">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="create-group">
+                <input type="submit" value="Create" class="hero-btn" />
+            </div>
+            </form>
+    </div>
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo" />
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+
+</body>
+</html>

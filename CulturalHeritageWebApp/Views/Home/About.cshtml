@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/homepage.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <img src="~/Photos/vase.png">
+            <div class="nav-links" id="navLinks">
+                <img src="~/Photos/closing.png" class="fa" style="width:15px; height: 15px" onclick="hideMenu()" />
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">HOME <span>&vert;</span></a></li>
+                    <li><a asp-controller="Locations" asp-action="Index">Cultural Locations <span>&vert;</span></a></li>
+                    <li><a asp-controller="Intangible" asp-action="Index">Intangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Tangible" asp-action="Index">Tangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Education">Education  <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+                </ul>
+            </div>
+            <img src="~/Photos/menu.png" style="width:25px; height: 25px" class="fa" onclick="showMenu()" />
+        </nav>
+        
+        <h1>About Us</h1>
+
+    </section>
+
+
+    @*Our Mission*@
+
+    <section class="about-us">
+
+        <div class="row">
+            <div class="about-col">
+                <h1>Our Mission</h1>
+                <p>
+                    Preserving cultural heritage plays a pivotal role in safeguarding our identity, history, and values that shape our society. Our mission is dedicated to ensuring that cultural heritage remains accessible, protected, and conserved for present and future generations. Through our platform, we aim to raise awareness of the richness of cultural heritage, promote its preservation, and facilitate access to information, resources, and tools necessary for researching, interpreting, and advocating for cultural heritage worldwide.
+                    Our mission encompasses the following objectives:
+                    Facilitating access to cultural heritage through digital tools and resources.
+                    Encouraging collaboration and knowledge-sharing among institutions, researchers, and enthusiasts devoted to preserving cultural heritage.
+                    Educating and raising awareness about the significance of conserving cultural heritage to ensure its long-term preservation.
+                    Promoting the diversity of cultural heritage and fostering understanding and respect for all facets of our past.
+                </p>
+                <h1>Our Vision</h1>
+                <p>
+                    Our vision is to create a platform that serves as a hub for exploring, sharing, collaborating, and advocating for cultural heritage, 
+                    thereby recognizing its importance and value in our daily lives.
+                </p>
+                <a href="" class="hero-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="~/Photos/jordan.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="sendComment">
+        <div class="row">
+            <div class="comment-box">
+                <h3> Leave a comment</h3>
+                <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <textarea rows="5" placeholder="Your comment"></textarea>
+                    <button type="submit" class="hero-btn">
+                        POST COMMENT
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo" />
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+
+
+    @*JavaSript for Toggle Menu*@
+    <script src="~/js/site.js"></script>
+</body>
+</html>

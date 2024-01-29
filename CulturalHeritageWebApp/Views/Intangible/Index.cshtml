@@ -1,0 +1,105 @@
+﻿@model IEnumerable<CulturalHeritageWebApp.ViewModels.VMHeritage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/intangible.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img src="~/Photos/vase.png">
+            <div class="nav-links" id="navLinks">
+                <img src="~/Photos/closing.png" class="fa" style="width:15px; height: 15px" onclick="hideMenu()" />
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">HOME <span>&vert;</span></a></li>
+                    <li><a asp-controller="Locations" asp-action="Index">Cultural Locations <span>&vert;</span></a></li>
+                    <li><a asp-controller="Intangible" asp-action="Index">Intangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Tangible" asp-action="Index">Tangible Heritage <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="Education">Education <span>&vert;</span></a></li>
+                    <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+                </ul>
+            </div>
+            <img src="~/Photos/menu.png" style="width:25px; height: 25px" class="fa" onclick="showMenu()" />
+        </nav>
+        <div class="text-box">
+            <h1>INTANGIBLE CULTURAL HERITAGE</h1>
+        </div>
+    </section>
+
+    @*Create*@
+
+    <section class="createIntangible">
+        <div class="row">
+            <div class="create-col">
+                <p>
+                    Intangible cultural heritage encompasses the living expressions and traditions passed down from generation to 
+                    generation within communities. Unlike tangible heritage, it comprises practices, knowledge, expressions, skills, 
+                    and rituals rather than physical artifacts. This includes oral traditions, performing arts, social practices, 
+                    rituals, festive events, traditional craftsmanship, languages, and more.
+                </p>
+                <h5>Give your contribution and enter a new object</h5>
+                <a asp-action="Create" class="hero-btn">CREATE NEW</a>
+
+            </div>
+            <div class="create-col">
+                <img src="~/Photos/da.png">
+            </div>
+        </div>
+    </section>
+
+
+    @*Intangible Heritage*@
+
+    <section class="intangible">
+        <h1> Explore Intangible Cultural Heritage </h1>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="intangible-col">
+                    @if (item.Photographies.Any() && !string.IsNullOrEmpty(item.Photographies.First().PicturePath))
+                    {
+                        <img src="@item.Photographies.First().PicturePath" class="card-img-top" alt="Heritage Image" style="height: 500px;">
+                    }
+                </div>
+                <div class="intangible-col">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="card-text">@item.Description</p>
+                    <div class="buttons">
+                        <a href="@Url.Action("Details", new { id = item.IDHeritage })" class="details-btn">Gallery</a>
+                        <div class="btnEditDelete">
+                            <a href="@Url.Action("Edit", new { id = item.IDHeritage })" class="edit-btn">Edit</a>
+                            <a href="@Url.Action("Delete", new { id = item.IDHeritage })" class="delete-btn">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+
+    @*Footer*@
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Create. Protect. Share.
+        </p>
+        <div class="icons">
+            <img src="~/Photos/face-logo.png" class="logo" />
+            <img src="~/Photos/insta-logo.png" class="logo" />
+            <img src="~/Photos/tik-tok-logo.png" class="logo" />
+            <img src="~/Photos/x-logo.png" class="logo" />
+        </div>
+    </section>
+
+    @*JavaSript for Toggle Menu*@
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>
